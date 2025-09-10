@@ -1,5 +1,6 @@
 :root{
   --dark-green: #768f67;
+  --mid-green: #739162;
   --light-green: #BDCCA5;
   --blue: #CDEEF8;
 }
@@ -48,6 +49,9 @@ h1,h2,h3{
   font-style: normal;
 }
 
+/* .highlight{
+  color:var(--dark-green)
+} */
 p{
   font-family: "Bona Nova", serif;
   font-weight: 500;
@@ -552,6 +556,11 @@ textarea{
   transform: translateY(50px);
   opacity: 0;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.no-link-style{
+  color: inherit;        
+  text-decoration: none
 }
 
 .experience-container.in-view{
