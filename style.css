@@ -1,3 +1,9 @@
+:root{
+  --dark-green: #768f67;
+  --light-green: #BDCCA5;
+  --blue: #CDEEF8;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -139,6 +145,10 @@ section{
     font-weight: 700;
 }
 
+#logo:hover{
+   color:var(--dark-green);
+}
+
 #resume{
     flex: 1;
     padding-right: 30px;
@@ -146,6 +156,10 @@ section{
     text-align: end;
     color: white;
     text-decoration: none;
+}
+
+#resume:hover{
+  color: var(--dark-green)
 }
 
 #nav-bar {
@@ -168,6 +182,9 @@ section{
     color: white;
 }
 
+#nav-bar a:hover{
+  color: var(--dark-green)
+}
 #section-title{
   font-weight: 700;
   font-size:46px;
