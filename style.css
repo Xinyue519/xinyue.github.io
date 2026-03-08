@@ -381,7 +381,7 @@ footer p {
 }
 
 .active{
-  opacity: 80%;
+  opacity: 40%;
 }
 
 .project-caption{
@@ -434,9 +434,9 @@ footer p {
 
 .dot{
   cursor: pointer;
-  color: white;
+  color: rgb(125, 128, 126);
   display: inline-block;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 /* contact section */
