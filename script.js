@@ -5,6 +5,9 @@ let eliteLinkBtn = document.getElementById("eliteLink-btn");
 let btaiBtn = document.getElementById("btai-btn");
 let eyeCanDoBtn = document.getElementById("eyeCanDo-btn");
 let jpmgBtn = document.getElementById("jpmg-btn");
+let mercuryBtn = document.getElementById("mercury-btn")
+let datadogBtn = document.getElementById("datadog-btn")
+let sbuAIBtn = document.getElementById("sbuAI-btn")
 
 window.onscroll = function() {scrollFunction()};
 
@@ -97,16 +100,20 @@ eyeCanDoBtn.addEventListener('click', ()=>openExperience('EyeCanDo'));
 jpmgBtn.addEventListener('click', ()=>openExperience('jpmg'));
 btaiBtn.addEventListener('click', ()=>openExperience('btAI'));
 eliteLinkBtn.addEventListener('click', ()=>openExperience('eliteLink'));
+mercuryBtn.addEventListener('click', ()=>openExperience('mercury'));
+datadogBtn.addEventListener('click', ()=>openExperience('datadog'))
+sbuAIBtn.addEventListener('click', ()=>openExperience('sbuAI'))
 
 function openExperience(name){
     const experience = document.getElementById(name);
     const currentActive = document.querySelector('.experience-active');
-    if(currentActive.id == name){
+    if(currentActive && currentActive.id == name){
         return;
     }
     if (currentActive) {
         currentActive.classList.remove('experience-active');
         currentActive.classList.add('hidden');
     }
+    experience.classList.remove('hidden');
     experience.classList.add('experience-active');
 }
