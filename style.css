@@ -286,131 +286,109 @@ footer p {
 
 #about-img{
   width: 95%;
+  border-radius: 15px;
 }
+
 #about-img:hover{
   transform: translateY(-8px);
 }
 
 #about-link{
   text-decoration: none;
-  color:#768f67;
+  color:#85a273;
+  font-weight: 600;
 }
 
-/* project-slider ----------------------------------------------------------------------------------------- */ 
+/* project widgets ----------------------------------------------------------------------------------------- */ 
 .project{
   width: 100%;
   display: flex;
 }
 
-.project-slider{
-  max-width: 10000px;
-  width: 70vw;
+.project-grid{
+  width: min(1100px, 92vw);
   margin: auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
+@media (max-width: 950px){
+  .project-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 600px){
+  .project-grid{
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-container{
-  padding-top: 30px;
-  display: none;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: rgba(189,204,165, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-container:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(74, 103, 67, 0.2);
 }
 
 .project-bg{
-  width: 70vw;
-  height:450px;
-  background-color: rgb(75, 157, 141);
-  border-radius: 15px;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  position: realtive;
-  animation: transform 0.6s ease-in-out;
+  width: 100%;
+  height: 42%;
+  background-color: rgb(246, 246, 246);
   overflow: hidden;
 }
 
 .project-bg:hover{
-  transform: scale(1.01)
+  transform: none;
 }
 
 #project-picture{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 50%;
-
-}
-
-.slider-dot{
-  align-items: center;
-  position: relative;
-  z-index: 10;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 35px;
-  transition: 0.6s ease;
-  border-radius: 5px;
-  user-select: none;
-  z-index: 10;
-}
-
-.prev{
-  left: 10px;
-}
-
-.next{
-  right: 10px;
-}
-
-.prev:hover, .next:hover{
-  color:#97B883;
-}
-
-.active{
-  opacity: 40%;
+  opacity: 0.8;
 }
 
 .project-caption{
-  position: absolute;
-  bottom: 50px;
-  text-align: center;
-  padding: 8px 12px;
+  flex: 1;
+  width: 100%;
+  padding: 14px 16px 4px;
   color:white;
-  line-height: 1;
+  text-align: left;
+  line-height: 1.2;
+  overflow-y: auto;
 }
 .project-caption h3{
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0 0 8px;
 }
 
 .project-caption p{
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 17px;
+  margin: 0 0 8px;
+  font-size: 15px;
 }
 #skills{
   color:white;
 }
 
 .project-icon{
-  position: absolute;
-  bottom: 25px;
-  font-size: 25px;
+  align-self: flex-end;
+  padding: 0 16px 12px;
+  font-size: 22px;
 }
 
 .project-icon .social-media-icon{
@@ -419,24 +397,6 @@ footer p {
 
 .project-icon .social-media-icon:hover{
   color: #97B883;
-}
-
-.slider-dot{
-  width: 100%;
-  gap: 13px;
-  display: flex;
-  align-items:end;
-  justify-content: center;
-  padding-top: 20px;
-  position: relative;
-  z-index: 20;
-}
-
-.dot{
-  cursor: pointer;
-  color: rgb(125, 128, 126);
-  display: inline-block;
-  font-size: 11px;
 }
 
 /* contact section */
@@ -574,10 +534,10 @@ textarea{
   width: 300px;
   background-color:rgba(189,204,165, 0.5);
   border-radius: 15px;
-  height: 400px;
+  height: 425px;
 }
 
-.experience-container a{
+.experience-navbar > a{
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -587,11 +547,11 @@ textarea{
   cursor: pointer;
 }
 
-.experience-container a:first-child {
+.experience-navbar > a:first-child {
   padding-top: 30px; 
 }
 
-.experience-container a:hover{
+.experience-navbar > a:hover{
   background-color:rgba(151, 184, 131, 0.5);
   border-radius: 15px;
 }
@@ -604,7 +564,7 @@ textarea{
 .experience{
   width: 800px;
   font-size: 20px;
-  height: 400px;
+  height: 425px;
   background-color:rgba(189,204,165, 0.5);
   border-radius: 15px;
   padding-left: 40px;
