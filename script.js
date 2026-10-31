@@ -3,7 +3,7 @@
    ========================================================= */
 const CARDS = [
   {
-    id: 'mercury', cat: 'Engineering', title: 'Support Copilot, built from scratch', org: 'Mercury · 2026',
+    id: 'mercury', cat: 'Engineering', areas: ['Frontend', 'AI/ML'], title: 'Support Copilot, built from scratch', org: 'Mercury · 2026',
     kind: 'stat', bg: '#E9EAF0', fg: '#141414', kicker: 'Copilot · Command', big: '450K+', sub: 'customers served by the support tools',
     summary: 'A new Copilot interface for Mercury’s customer support team, designed and built from scratch to bring AI-powered workflows into support and modernize legacy Zendesk functionality.',
     points: [
@@ -16,7 +16,7 @@ const CARDS = [
     url: 'https://mercury.com/', linkLabel: 'Mercury'
   },
   {
-    id: 'datadog', cat: 'Engineering', title: 'ROI analytics for AI agents', org: 'Datadog · 2026',
+    id: 'datadog', cat: 'Engineering', areas: ['Full-stack'], title: 'ROI analytics for AI agents', org: 'Datadog · 2026',
     kind: 'stat', bg: '#141414', fg: '#FAFAF8', kicker: 'Agent Console', big: '8K+', sub: 'metrics a day, event-driven',
     summary: 'A full-stack ROI feature in Datadog’s Agent Console that turns Jira and GitHub activity into productivity analytics for engineering AI agents.',
     points: [
@@ -29,7 +29,7 @@ const CARDS = [
     url: 'https://docs.datadoghq.com/ai_agents_console/', linkLabel: 'About Agent Console'
   },
   {
-    id: 'kdd', cat: 'Research', title: 'Time-series transformers for battery life', org: 'KDD MILETS ’26',
+    id: 'kdd', cat: 'Research', areas: ['AI/ML'], title: 'Time-series transformers for battery life', org: 'KDD MILETS ’26',
     kind: 'stat', bg: '#ECECE7', fg: '#141414', kicker: 'Published paper', big: '99%', sub: 'improvement over the ridge baseline',
     summary: 'Forecasting the remaining useful life of lithium-ion batteries with transformer-based time-series models and meta-learning, at the Stony Brook AI Innovation Institute.',
     points: [
@@ -42,14 +42,14 @@ const CARDS = [
     linkLabel: 'Read the paper'
   },
   {
-    id: 'split', cat: 'Projects', title: 'SplitABill', org: 'Mobile app', kind: 'cover',
+    id: 'split', cat: 'Projects', areas: ['Full-stack', 'Mobile'], title: 'SplitABill', org: 'Mobile app', kind: 'cover',
     summary: 'A full-stack mobile app that makes splitting party bills painless, with the Google Gemini API providing intelligent assistance and automation.',
     points: [],
     stack: ['React Native', 'Express.js', 'Node.js', 'MongoDB', 'Gemini API', 'JWT'],
     url: 'https://github.com/Xinyue519/SplitABill', linkLabel: 'View on GitHub'
   },
   {
-    id: 'jpmc', cat: 'Engineering', title: 'AI investment chatbot', org: 'JPMorgan Chase',
+    id: 'jpmc', cat: 'Engineering', areas: ['AI/ML', 'Frontend'], title: 'AI investment chatbot', org: 'JPMorgan Chase',
     kind: 'stat', bg: '#F3F0EA', fg: '#141414', kicker: 'AI Fellowship · team lead', big: '93%', sub: 'prediction accuracy on 14K+ deals',
     summary: 'Led a team of 4 building a chatbot that helps investors find high-potential startups, backed by a neural network trained on historical investment data.',
     points: [
@@ -61,28 +61,28 @@ const CARDS = [
     url: 'https://www.jpmorganchase.com/', linkLabel: 'JPMorgan Chase'
   },
   {
-    id: 'adhd', cat: 'Research', title: 'ADHD prediction from neuroimaging', org: 'Top 0.03% Kaggle', kind: 'cover',
+    id: 'adhd', cat: 'Research', areas: ['AI/ML'], title: 'ADHD prediction from neuroimaging', org: 'Top 0.03% Kaggle', kind: 'cover',
     summary: 'A neural network predicting ADHD and sex classification from neuroimaging data for the WiDS Datathon 2025.',
     points: ['Ranked top 0.03% on Kaggle', '#1 across Break Through Tech’s Cornell, MIT and UCLA cohorts'],
     stack: ['TensorFlow', 'NumPy', 'Pandas'],
     url: 'https://github.com/wids-teamConscious/WIDS-Datathon-2025', linkLabel: 'View on GitHub'
   },
   {
-    id: 'nutri', cat: 'Projects', title: 'NutriBot', org: 'AI meal planner', kind: 'cover',
+    id: 'nutri', cat: 'Projects', areas: ['Full-stack', 'AI/ML'], title: 'NutriBot', org: 'AI meal planner', kind: 'cover',
     summary: 'An AI meal-planning assistant that recommends recipes based on your input.',
     points: [],
     stack: ['React', 'FastAPI', 'Qdrant', 'Redis', 'OpenAI API'],
     url: 'https://github.com/Xinyue519/meal_planner', linkLabel: 'View on GitHub'
   },
   {
-    id: 'hopper', cat: 'Projects', title: 'Captain Hopper', org: 'Unity · Hackathon', kind: 'cover',
+    id: 'hopper', cat: 'Projects', areas: ['Game dev'], title: 'Captain Hopper', org: 'Unity · Hackathon', kind: 'cover',
     summary: 'A desktop study-buddy pomodoro with an engaging reward system.',
     points: [],
     stack: ['C#', 'Unity'],
     url: 'https://devpost.com/software/captain-hopper', linkLabel: 'View on Devpost'
   },
   {
-    id: 'airbnb', cat: 'Research', title: 'Airbnb price predictor', org: 'ML model', kind: 'cover',
+    id: 'airbnb', cat: 'Research', areas: ['AI/ML'], title: 'Airbnb price predictor', org: 'ML model', kind: 'cover',
     summary: 'A machine-learning model predicting New York Airbnb prices from historical listing data.',
     points: [],
     stack: ['scikit-learn', 'Pandas', 'NumPy', 'Seaborn'],
@@ -91,27 +91,32 @@ const CARDS = [
 ];
 
 const EXPS = [
-  { id: 'mercury', domain: 'mercury.com', org: 'Mercury', title: 'Software Engineer Intern', dates: 'Sep 2026 – Now', url: 'https://mercury.com/',
+  { id: 'mercury', areas: ['Frontend', 'AI/ML'], domain: 'mercury.com', org: 'Mercury', title: 'Software Engineer Intern', dates: 'Sep 2026 – Now', url: 'https://mercury.com/',
     bullets: [
       'Designed and built a new Copilot interface from scratch using React and TypeScript, collaborating with engineers to develop AI-powered support workflows and modernize legacy Zendesk functionality supporting Mercury’s 450K+ customer base',
       'Engineered and optimized customer-facing UI components using React and TypeScript, debugging frontend issues and improving application reliability and consistency across Mercury’s fintech platform',
       'Developed AI-powered shortcut recommendation actions in Command, streamlining agent workflows and accelerating access to relevant support actions'
     ] },
-  { id: 'datadog', domain: 'datadoghq.com', org: 'Datadog', title: 'Software Engineer Intern', dates: 'May – Aug 2026', url: 'https://www.datadoghq.com/',
+  { id: 'datadog', areas: ['Full-stack'], domain: 'datadoghq.com', org: 'Datadog', title: 'Software Engineer Intern', dates: 'May – Aug 2026', url: 'https://www.datadoghq.com/',
     bullets: ['Full-stack ROI analytics for AI agents in Agent Console (Go, React, Kubernetes, PostgreSQL)', 'Kafka-based Go microservice generating 8K+ daily metrics', 'gRPC + Kubernetes services; user fetching 18% faster'] },
-  { id: 'sbuai', domain: 'stonybrook.edu', org: 'Stony Brook AI Innovation Institute', title: 'Deep Learning Researcher', dates: 'Aug 2025 – Jun 2026', url: 'https://ai.stonybrook.edu/',
+  { id: 'sbuai', areas: ['AI/ML', 'Research'], domain: 'stonybrook.edu', org: 'Stony Brook AI Innovation Institute', title: 'Deep Learning Researcher', dates: 'Aug 2025 – Jun 2026', url: 'https://ai.stonybrook.edu/',
     bullets: ['Paper accepted to KDD MILETS ’26', 'Transformer + meta-learning models for battery remaining useful life'] },
-  { id: 'eyecando', domain: 'eyecando.org', logo: 'img/logos/eyecando.png', org: 'EyeCanDo (HCI Lab)', title: 'Front-end Developer', dates: 'Feb – May 2025', url: 'https://eyecando.org/',
+  { id: 'eyecando', areas: ['Frontend'], domain: 'eyecando.org', logo: 'img/logos/eyecando.png', org: 'EyeCanDo (HCI Lab)', title: 'Front-end Developer', dates: 'Feb – May 2025', url: 'https://eyecando.org/',
     bullets: ['Redesigned the lab website; page load 30% faster, better accessibility and mobile support'] },
-  { id: 'jpmc', domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2024', url: 'https://www.jpmorganchase.com/',
+  { id: 'jpmc', areas: ['AI/ML', 'Frontend'], domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2024', url: 'https://www.jpmorganchase.com/',
     bullets: ['Led a team of 4 on an AI investment chatbot; 93% prediction accuracy on 14K+ investments'] },
-  { id: 'btai', domain: 'breakthroughtech.org', org: 'Break Through Tech AI', title: 'AI/ML Research Fellow', dates: 'May 2024 – May 2025', url: 'https://www.breakthroughtech.org/',
+  { id: 'btai', areas: ['AI/ML'], domain: 'breakthroughtech.org', org: 'Break Through Tech AI', title: 'AI/ML Research Fellow', dates: 'May 2024 – May 2025', url: 'https://www.breakthroughtech.org/',
     bullets: ['Selected from 3,000+ applicants', 'Scalable ML pipelines with testing and validation for reproducibility'] },
-  { id: 'elitelink', domain: 'elitelinkadmission.com', org: 'EliteLink', title: 'Research Assistant', dates: 'Jul 2023 – Jul 2024', url: 'https://www.elitelinkadmission.com/',
+  { id: 'elitelink', areas: ['Teaching'], domain: 'elitelinkadmission.com', org: 'EliteLink', title: 'Research Assistant', dates: 'Jul 2023 – Jul 2024', url: 'https://www.elitelinkadmission.com/',
     bullets: ['Course materials for live streams with 10K+ viewers', 'Guest speaker at Rider University and Beijing Normal University'] }
 ];
 
-const FILTERS = [['all', 'All work'], ['Engineering', 'Engineering'], ['Research', 'Research'], ['Projects', 'Projects']];
+const FILTERS = [['all', 'All work'], ['Full-stack', 'Full-stack'], ['Frontend', 'Frontend'], ['Backend', 'Backend'], ['AI/ML', 'AI / ML']];
+
+/* Full-stack work counts toward both Frontend and Backend. */
+const FILTER_MATCH = { 'Frontend': ['Frontend', 'Full-stack'], 'Backend': ['Backend', 'Full-stack'] };
+
+const areasHTML =(areas, cls) => `<span class="${cls}">${areas.map((a) => `<span>${esc(a)}</span>`).join('')}</span>`;
 const EMAIL = 'xysu05@gmail.com';
 
 /* =========================================================
@@ -200,12 +205,14 @@ function coverHTML(id) {
 function mediaHTML(c) {
   if (c.kind === 'stat') {
     return `<div class="stat" style="background:${c.bg};color:${c.fg}">
-      <span class="stat-kicker">${esc(c.kicker)}</span>
+      <div class="stat-top"><span class="stat-kicker">${esc(c.kicker)}</span>${areasHTML(c.areas, 'areas')}</div>
       <div><span class="stat-big">${esc(c.big)}</span><span class="stat-sub">${esc(c.sub)}</span></div>
     </div>`;
   }
-  if (c.kind === 'img') return `<img src="${esc(c.img)}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">`;
-  return coverHTML(c.id);
+  const inner = c.kind === 'img'
+    ? `<img src="${esc(c.img)}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">`
+    : coverHTML(c.id);
+  return inner + areasHTML(c.areas, 'areas media-areas');
 }
 
 /* =========================================================
@@ -252,7 +259,7 @@ function cardHTML(c) {
 }
 
 function renderCards() {
-  const list = CARDS.filter((c) => filter === 'all' || c.cat === filter);
+  const list = CARDS.filter((c) => filter === 'all' || (FILTER_MATCH[filter] || [filter]).some((a) => c.areas.includes(a)));
   const left = list.filter((_, i) => i % 2 === 0);
   const right = list.filter((_, i) => i % 2 === 1);
   $('#cards').innerHTML =
@@ -327,6 +334,7 @@ function renderExp() {
       <button type="button" class="exp-row" data-exp="${e.id}" aria-expanded="${open}">
         <span class="exp-org">${logoHTML(e)}<span>${esc(e.org)}</span></span>
         <span class="exp-title">${esc(e.title)}</span>
+        ${areasHTML(e.areas, 'areas exp-areas')}
         <span class="exp-dates">${esc(e.dates)}</span>
         <span class="exp-sign" aria-hidden="true">${open ? '−' : '+'}</span>
       </button>
