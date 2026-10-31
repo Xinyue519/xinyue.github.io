@@ -37,7 +37,7 @@ const CARDS = [
       'Meta-learning applied to foundation time-series models',
       '99% better than ridge regression, 88% better than the foundation-model baseline'
     ],
-    stack: ['Transformers', 'Meta-learning', 'Time series'],
+    stack: ['Transformers', 'Python', 'Meta-learning', 'Time series'],
     url: 'https://kdd-milets.github.io/milets2026/accepted%20papers/23Time-Series%20Transformers%20for%20Battery%20Life%20Estimation%20(4).pdf',
     linkLabel: 'Read the paper'
   },
@@ -64,14 +64,14 @@ const CARDS = [
     id: 'adhd', cat: 'Research', areas: ['AI/ML'], title: 'ADHD prediction from neuroimaging', org: 'Top 0.03% Kaggle', kind: 'cover',
     summary: 'A neural network predicting ADHD and sex classification from neuroimaging data for the WiDS Datathon 2025.',
     points: ['Ranked top 0.03% on Kaggle', '#1 across Break Through Tech’s Cornell, MIT and UCLA cohorts'],
-    stack: ['TensorFlow', 'NumPy', 'Pandas'],
+    stack: ['TensorFlow', 'Python', 'NumPy', 'Pandas'],
     url: 'https://github.com/wids-teamConscious/WIDS-Datathon-2025', linkLabel: 'View on GitHub'
   },
   {
     id: 'nutri', cat: 'Projects', areas: ['Full-stack', 'AI/ML'], title: 'NutriBot', org: 'AI meal planner', kind: 'cover',
     summary: 'An AI meal-planning assistant that recommends recipes based on your input.',
     points: [],
-    stack: ['React', 'FastAPI', 'Qdrant', 'Redis', 'OpenAI API'],
+    stack: ['React', 'FastAPI', 'Python', 'Qdrant', 'Redis', 'OpenAI API'],
     url: 'https://github.com/Xinyue519/meal_planner', linkLabel: 'View on GitHub'
   },
   {
@@ -85,7 +85,7 @@ const CARDS = [
     id: 'airbnb', cat: 'Research', areas: ['AI/ML'], title: 'Airbnb price predictor', org: 'ML model', kind: 'cover',
     summary: 'A machine-learning model predicting New York Airbnb prices from historical listing data.',
     points: [],
-    stack: ['scikit-learn', 'Pandas', 'NumPy', 'Seaborn'],
+    stack: ['Python', 'scikit-learn', 'Pandas', 'NumPy', 'Seaborn'],
     url: 'https://github.com/Xinyue519/Airbnb-Price-Predictor', linkLabel: 'View on GitHub'
   }
 ];
