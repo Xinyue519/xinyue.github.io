@@ -111,7 +111,7 @@ const EXPS = [
     bullets: ['Course materials for live streams with 10K+ viewers', 'Guest speaker at Rider University and Beijing Normal University'] }
 ];
 
-const FILTERS = [['all', 'All work'], ['Full-stack', 'Full-stack'], ['Frontend', 'Frontend'], ['Backend', 'Backend'], ['AI/ML', 'AI / ML']];
+const FILTERS = [['all', 'All projects'], ['Full-stack', 'Full-stack'], ['Frontend', 'Frontend'], ['Backend', 'Backend'], ['AI/ML', 'AI / ML']];
 
 /* Full-stack work counts toward both Frontend and Backend. */
 const FILTER_MATCH = { 'Frontend': ['Frontend', 'Full-stack'], 'Backend': ['Backend', 'Full-stack'] };
@@ -218,10 +218,11 @@ function mediaHTML(c) {
 /* =========================================================
    Tabs (hash-routed so each tab has its own link)
    ========================================================= */
-const TABS = ['work', 'experience', 'about'];
+const TABS = ['projects', 'experience', 'about'];
 
 function showTab(name, { scroll = true } = {}) {
-  if (!TABS.includes(name)) name = 'work';
+  if (name === 'work') name = 'projects'; // old links
+  if (!TABS.includes(name)) name = 'projects';
   document.querySelectorAll('[data-panel]').forEach((p) => {
     const on = p.dataset.panel === name;
     p.hidden = !on;
@@ -421,4 +422,4 @@ renderFilters();
 renderCards();
 renderExp();
 initCarousel();
-showTab(location.hash.slice(1) || 'work', { scroll: false });
+showTab(location.hash.slice(1) || 'projects', { scroll: false });
