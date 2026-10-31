@@ -202,11 +202,13 @@ a:hover .arrow { transform: translate(3px, -3px); }
 .exp { border-bottom: 1px solid var(--line-2); }
 .exp-row {
   width: 100%; text-align: left; border: none; background: transparent;
-  padding: 22px 12px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 24px;
+  padding: 22px 12px; display: grid; align-items: center; column-gap: clamp(16px, 2vw, 32px); row-gap: 10px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr) 210px 170px 20px;
+  grid-template-areas: "org title areas dates sign";
   transition: background-color .2s ease;
 }
 .exp-row:hover { background: #F3F3EF; }
-.exp-org { display: flex; align-items: center; gap: clamp(10px, .9vw, 16px); flex: 1 1 260px; font-size: clamp(17px, 1.2vw, 24px); font-weight: 600; }
+.exp-org { display: flex; align-items: center; gap: clamp(10px, .9vw, 16px); grid-area: org; min-width: 0; font-size: clamp(17px, 1.2vw, 24px); font-weight: 600; }
 .exp-logo {
   position: relative; flex: none; width: clamp(26px, 1.8vw, 34px); height: clamp(26px, 1.8vw, 34px);
   display: flex; align-items: center; justify-content: center;
@@ -220,10 +222,10 @@ a:hover .arrow { transform: translate(3px, -3px); }
 .stat .areas span { color: inherit; border-color: color-mix(in srgb, currentColor 30%, transparent); }
 .media-areas { position: absolute; top: clamp(12px, 3cqi, 22px); right: clamp(12px, 3cqi, 22px); z-index: 2; }
 .media-areas span { background: rgba(255, 255, 255, .72); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border-color: rgba(20, 20, 20, .1); }
-.exp-areas { flex: 0 1 auto; align-self: center; }
-.exp-title { flex: 1 1 220px; font-size: clamp(15px, 1vw, 19px); color: var(--ink-2); }
-.exp-dates { flex: 0 0 180px; font-family: var(--mono); font-size: 13px; color: var(--ink-3); text-align: right; }
-.exp-sign { flex: 0 0 20px; font-size: 20px; color: var(--accent); text-align: right; }
+.exp-areas { grid-area: areas; justify-content: flex-start; }
+.exp-title { grid-area: title; font-size: clamp(15px, 1vw, 19px); color: var(--ink-2); }
+.exp-dates { grid-area: dates; font-family: var(--mono); font-size: 13px; color: var(--ink-3); text-align: right; }
+.exp-sign { grid-area: sign; font-size: 20px; color: var(--accent); text-align: right; }
 .exp-body { padding: 0 12px 26px; display: flex; flex-direction: column; gap: 14px; max-width: 72ch; animation: rowIn .35s ease; }
 .exp-body ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.6; color: #2F2F2A; }
 .mono-link { align-self: flex-start; font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 10px 0; }
@@ -324,13 +326,17 @@ a:hover .arrow { transform: translate(3px, -3px); }
 .btn-dark { align-self: flex-start; margin-top: 8px; text-decoration: none; color: #fff; background: var(--ink); padding: 14px 22px; border-radius: 999px; font-weight: 500; }
 .btn-dark:hover { color: #fff; background: #2A2A26; }
 body.no-scroll { overflow: hidden; }
+@media (max-width: 900px) {
+  .exp-row { grid-template-columns: minmax(0, 1fr) 20px; grid-template-areas: "org sign" "title title" "areas areas" "dates dates"; }
+  .exp-dates { text-align: left; }
+  .exp-sign { align-self: start; }
+}
 @media (max-width: 600px) {
   .filters { flex-wrap: nowrap; overflow-x: auto; margin-left: calc(var(--gutter) * -1); margin-right: calc(var(--gutter) * -1); padding: 0 var(--gutter) 4px; scrollbar-width: none; }
   .chip { flex: none; }
   .footer-right { align-items: flex-start; }
   .sheet-body { padding: 28px 22px 28px; }
   .backdrop { padding: 12px; }
-  .exp-dates { text-align: left; flex-basis: auto; }
 }
 
 /* ---------- Motion ---------- */
