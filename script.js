@@ -13,7 +13,7 @@ const CARDS = [
       'Engineered and optimized customer-facing UI components, debugging frontend issues to improve reliability and consistency'
     ],
     stack: ['React', 'TypeScript', 'AI workflows', 'Zendesk'],
-    url: 'https://mercury.com/command', linkLabel: 'Mercury'
+    url: 'https://mercury.com/command', linkLabel: 'About Command'
   },
   {
     id: 'datadog', cat: 'Engineering', areas: ['Full-stack'], title: 'ROI analytics for AI agents', org: 'Datadog · 2026',
