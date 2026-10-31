@@ -372,12 +372,18 @@ $('#to-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior:
    Entries with an empty src show a placeholder tile.
    ========================================================= */
 const PHOTOS = [
-  { src: '', alt: '', caption: 'Swimming' },
-  { src: '', alt: '', caption: 'Pottery' },
-  { src: '', alt: '', caption: 'Hiking' },
-  { src: '', alt: '', caption: 'Knitting' },
-  { src: '', alt: '', caption: 'Upcycling' },
-  { src: '', alt: '', caption: 'Running' }
+  { src: 'img/carousel/1.JPG'},
+  { src: 'img/carousel/2.JPG'},    
+  { src: 'img/carousel/3.JPG'},    
+  { src: 'img/carousel/4.JPG'},    
+  { src: 'img/carousel/5.JPG'},    
+  { src: 'img/carousel/6.JPG'},    
+  { src: 'img/carousel/7.jpg'},
+  { src: 'img/carousel/8.JPG'},
+  { src: 'img/carousel/9.jpg'},
+  { src: 'img/carousel/10.PNG'},
+  { src: 'img/carousel/11.JPG'},
+  { src: 'img/carousel/12.jpg'},
 ];
 
 function initCarousel() {
