@@ -97,18 +97,18 @@ const EXPS = [
       'Engineered and optimized customer-facing UI components using React and TypeScript, debugging frontend issues and improving application reliability and consistency across Mercury’s fintech platform',
       'Developed AI-powered shortcut recommendation actions in Command, streamlining agent workflows and accelerating access to relevant support actions'
     ] },
-  { id: 'datadog', areas: ['Full-stack'], domain: 'datadoghq.com', org: 'Datadog', title: 'Software Engineer Intern', dates: 'May – Aug 2026', url: 'https://www.datadoghq.com/',
+  { id: 'datadog', areas: ['Full-stack'], domain: 'datadoghq.com', org: 'Datadog', title: 'Software Engineer Intern', dates: 'May 2026 – Aug 2026', url: 'https://www.datadoghq.com/',
     bullets: ['Full-stack ROI analytics for AI agents in Agent Console (Go, React, Kubernetes, PostgreSQL)', 'Kafka-based Go microservice generating 8K+ daily metrics', 'gRPC + Kubernetes services; user fetching 18% faster'] },
   { id: 'sbuai', areas: ['AI/ML', 'Research'], domain: 'stonybrook.edu', org: 'Stony Brook AI Innovation Institute', title: 'Deep Learning Researcher', dates: 'Aug 2025 – Jun 2026', url: 'https://ai.stonybrook.edu/',
     bullets: ['Paper accepted to KDD MILETS ’26', 'Transformer + meta-learning models for battery remaining useful life'] },
-  { id: 'eyecando', areas: ['Frontend'], domain: 'eyecando.org', logo: 'img/logos/eyecando.png', org: 'EyeCanDo (HCI Lab)', title: 'Front-end Developer', dates: 'Feb – May 2025', url: 'https://eyecando.org/',
-    bullets: ['Redesigned the lab website; page load 30% faster, better accessibility and mobile support'] },
+  { id: 'eyecando', areas: ['Frontend'], domain: 'eyecando.org', logo: 'img/logos/eyecando.png', org: 'EyeCanDo', title: 'Front-end Developer', dates: 'Feb 2025 – May 2025', url: 'https://eyecando.org/',
+    bullets: ['Redesigned the lab website', 'Improved page load by 30%, achieved better accessibility and mobile support'] },
   { id: 'jpmc', areas: ['AI/ML', 'Frontend'], domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2024', url: 'https://www.jpmorganchase.com/',
-    bullets: ['Led a team of 4 on an AI investment chatbot; 93% prediction accuracy on 14K+ investments'] },
-  { id: 'btai', areas: ['AI/ML'], domain: 'breakthroughtech.org', org: 'Break Through Tech AI', title: 'AI/ML Research Fellow', dates: 'May 2024 – May 2025', url: 'https://www.breakthroughtech.org/',
+    bullets: ['Led a team of 4 on an AI investment chatbot recommending startups', '93% prediction accuracy on 14K+ investments Kaggle data'] },
+  { id: 'btai', areas: ['AI/ML'], domain: 'tech.cornell.edu', org: 'Cornell Tech', title: 'AI/ML Research Fellow', dates: 'May 2024 – May 2025', url: 'https://tech.cornell.edu/',
     bullets: ['Selected from 3,000+ applicants', 'Scalable ML pipelines with testing and validation for reproducibility'] },
-  { id: 'elitelink', areas: ['Teaching'], domain: 'elitelinkadmission.com', org: 'EliteLink', title: 'Research Assistant', dates: 'Jul 2023 – Jul 2024', url: 'https://www.elitelinkadmission.com/',
-    bullets: ['Course materials for live streams with 10K+ viewers', 'Guest speaker at Rider University and Beijing Normal University'] }
+  { id: 'elitelink', areas: ['AI/ML'], domain: 'elitelinkadmission.com', org: 'EliteLink', title: 'Research Assistant', dates: 'Jul 2023 – Jul 2024', url: 'https://www.elitelinkadmission.com/',
+    bullets: ['Trends and applications of Al in education', 'Guest speaker at Rider University and Beijing Normal University'] }
 ];
 
 const FILTERS = [['all', 'All projects'], ['Full-stack', 'Full-stack'], ['Frontend', 'Frontend'], ['Backend', 'Backend'], ['AI/ML', 'AI / ML']];
