@@ -103,7 +103,7 @@ const EXPS = [
     bullets: ['Paper accepted to KDD MILETS ’26', 'Transformer + meta-learning models for battery remaining useful life'] },
   { id: 'eyecando', domain: 'eyecando.org', logo: 'img/logos/eyecando.png', org: 'EyeCanDo (HCI Lab)', title: 'Front-end Developer', dates: 'Feb – May 2025', url: 'https://eyecando.org/',
     bullets: ['Redesigned the lab website; page load 30% faster, better accessibility and mobile support'] },
-  { id: 'jpmc', domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2025', url: 'https://www.jpmorganchase.com/',
+  { id: 'jpmc', domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2024', url: 'https://www.jpmorganchase.com/',
     bullets: ['Led a team of 4 on an AI investment chatbot; 93% prediction accuracy on 14K+ investments'] },
   { id: 'btai', domain: 'breakthroughtech.org', org: 'Break Through Tech AI', title: 'AI/ML Research Fellow', dates: 'May 2024 – May 2025', url: 'https://www.breakthroughtech.org/',
     bullets: ['Selected from 3,000+ applicants', 'Scalable ML pipelines with testing and validation for reproducibility'] },
