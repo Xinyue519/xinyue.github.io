@@ -198,6 +198,8 @@ a:hover .arrow { transform: translate(3px, -3px); }
 /* ---------- Experience ---------- */
 .page { padding-top: clamp(56px, 7vw, 140px); padding-bottom: clamp(64px, 7vw, 140px); display: flex; flex-direction: column; gap: 28px; }
 .page-title { margin: 0 0 12px; max-width: 30ch; font-size: clamp(28px, 1.6vw + 14px, 52px); line-height: 1.12; font-weight: 600; letter-spacing: -.02em; }
+.blog-list { border-top: 1px solid var(--line-2); padding-top: 28px; }
+.blog-empty { color: var(--ink-3); font-size: clamp(15px, .4vw + 12px, 17px); }
 .exp-list { border-top: 1px solid var(--line-2); }
 .exp { border-bottom: 1px solid var(--line-2); }
 .exp-row {

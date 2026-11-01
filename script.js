@@ -218,7 +218,7 @@ function mediaHTML(c) {
 /* =========================================================
    Tabs (hash-routed so each tab has its own link)
    ========================================================= */
-const TABS = ['projects', 'experience', 'about'];
+const TABS = ['projects', 'experience', 'about', 'blog'];
 
 function showTab(name, { scroll = true } = {}) {
   if (name === 'work') name = 'projects'; // old links
