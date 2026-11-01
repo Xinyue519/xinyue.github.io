@@ -91,7 +91,7 @@ const CARDS = [
 ];
 
 const EXPS = [
-  { id: 'mercury', areas: ['Frontend', 'AI/ML'], domain: 'mercury.com', org: 'Mercury', title: 'Software Engineer Intern', dates: 'Sep 2026 – Now', url: 'https://mercury.com/',
+  { id: 'mercury', areas: ['Frontend', 'Agent'], domain: 'mercury.com', org: 'Mercury', title: 'Software Engineer Intern', dates: 'Sep 2026 – Now', url: 'https://mercury.com/',
     bullets: [
       'Designed and built a new Copilot interface from scratch using React and TypeScript, collaborating with engineers to develop AI-powered support workflows and modernize legacy Zendesk functionality supporting Mercury’s 450K+ customer base',
       'Engineered and optimized customer-facing UI components using React and TypeScript, debugging frontend issues and improving application reliability and consistency across Mercury’s fintech platform',
@@ -99,13 +99,13 @@ const EXPS = [
     ] },
   { id: 'datadog', areas: ['Full-stack'], domain: 'datadoghq.com', org: 'Datadog', title: 'Software Engineer Intern', dates: 'May 2026 – Aug 2026', url: 'https://www.datadoghq.com/',
     bullets: ['Full-stack ROI analytics for AI agents in Agent Console (Go, React, Kubernetes, PostgreSQL)', 'Kafka-based Go microservice generating 8K+ daily metrics', 'gRPC + Kubernetes services; user fetching 18% faster'] },
-  { id: 'sbuai', areas: ['AI/ML', 'Research'], domain: 'stonybrook.edu', org: 'Stony Brook AI Innovation Institute', title: 'Deep Learning Researcher', dates: 'Aug 2025 – Jun 2026', url: 'https://ai.stonybrook.edu/',
+  { id: 'sbuai', areas: ['AI/ML'], domain: 'stonybrook.edu', org: 'Stony Brook AI Innovation Institute', title: 'Deep Learning Researcher', dates: 'Aug 2025 – Jun 2026', url: 'https://ai.stonybrook.edu/',
     bullets: ['Paper accepted to KDD MILETS ’26', 'Transformer + meta-learning models for battery remaining useful life'] },
   { id: 'eyecando', areas: ['Frontend'], domain: 'eyecando.org', logo: 'img/logos/eyecando.png', org: 'EyeCanDo', title: 'Front-end Developer', dates: 'Feb 2025 – May 2025', url: 'https://eyecando.org/',
     bullets: ['Redesigned the lab website', 'Improved page load by 30%, achieved better accessibility and mobile support'] },
-  { id: 'jpmc', areas: ['AI/ML', 'Frontend'], domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2024', url: 'https://www.jpmorganchase.com/',
+  { id: 'jpmc', areas: ['Full-stack', 'AI/ML'], domain: 'jpmorganchase.com', org: 'JPMorgan Chase', title: 'AI Fellow', dates: 'Aug 2024 – Dec 2024', url: 'https://www.jpmorganchase.com/',
     bullets: ['Led a team of 4 on an AI investment chatbot recommending startups', '93% prediction accuracy on 14K+ investments Kaggle data'] },
-  { id: 'btai', areas: ['AI/ML'], domain: 'tech.cornell.edu', org: 'Cornell Tech', title: 'AI/ML Research Fellow', dates: 'May 2024 – May 2025', url: 'https://tech.cornell.edu/',
+  { id: 'btai', areas: ['AI/ML'], domain: 'tech.cornell.edu', org: 'Cornell Tech', title: 'AI Fellow', dates: 'May 2024 – May 2025', url: 'https://tech.cornell.edu/',
     bullets: ['Selected from 3,000+ applicants', 'Scalable ML pipelines with testing and validation for reproducibility'] },
   { id: 'elitelink', areas: ['AI/ML'], domain: 'elitelinkadmission.com', org: 'EliteLink', title: 'Research Assistant', dates: 'Jul 2023 – Jul 2024', url: 'https://www.elitelinkadmission.com/',
     bullets: ['Trends and applications of Al in education', 'Guest speaker at Rider University and Beijing Normal University'] }
