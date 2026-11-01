@@ -3,7 +3,7 @@
    ========================================================= */
 const CARDS = [
   {
-    id: 'mercury', cat: 'Engineering', areas: ['Frontend', 'AI/ML'], title: 'Support Copilot, built from scratch', org: 'Mercury · 2026',
+    id: 'mercury', cat: 'Engineering', areas: ['Frontend', 'Agent'], title: 'Support Copilot, built from scratch', org: 'Mercury · 2026',
     kind: 'stat', bg: '#E9EAF0', fg: '#141414', kicker: 'Copilot · Command', big: '450K+', sub: 'customers served by the support tools',
     summary: 'A new Copilot interface for Mercury’s customer support team, designed and built from scratch to bring AI-powered workflows into support and modernize legacy Zendesk functionality.',
     points: [
@@ -29,6 +29,17 @@ const CARDS = [
     url: 'https://docs.datadoghq.com/ai_agents_console/', linkLabel: 'About Agent Console'
   },
   {
+    id: 'seated', cat: 'Projects', areas: ['Full-stack', 'Agent'], title: 'Seated', org: 'AI reservation agent', kind: 'cover',
+    summary: 'A restaurant discovery and booking app built around a conversational agent: describe what you want and it searches, checks availability, books, modifies or cancels reservations for you, showing every step it takes.',
+    points: [
+      'Go tool-calling agent that completes multi-step reservation workflows (search, check availability, book, modify, cancel) from natural language, with a step-by-step trace of every action',
+      'Postgres schema with PostGIS radius search and pgvector (HNSW) similar-restaurant recommendations, plus Redis sessions and unit tests',
+      'React and TypeScript interface with Google Maps and Places APIs for restaurant search and chat'
+    ],
+    stack: ['Go', 'PostgreSQL', 'PostGIS', 'pgvector', 'Redis', 'React', 'TypeScript', 'OpenAI API', 'Google Maps API'],
+    url: 'https://github.com/Xinyue519/seated', linkLabel: 'View on GitHub'
+  },
+  {
     id: 'kdd', cat: 'Research', areas: ['AI/ML'], title: 'Time-series transformers for battery life', org: 'KDD MILETS ’26',
     kind: 'stat', bg: '#ECECE7', fg: '#141414', kicker: 'Published paper', big: '99%', sub: 'improvement over the ridge baseline',
     summary: 'Forecasting the remaining useful life of lithium-ion batteries with transformer-based time-series models and meta-learning, at the Stony Brook AI Innovation Institute.',
@@ -49,7 +60,7 @@ const CARDS = [
     url: 'https://github.com/Xinyue519/SplitABill', linkLabel: 'View on GitHub'
   },
   {
-    id: 'jpmc', cat: 'Engineering', areas: ['AI/ML', 'Frontend'], title: 'AI investment chatbot', org: 'JPMorgan Chase',
+    id: 'jpmc', cat: 'Engineering', areas: ['AI/ML', 'Frontend'], title: 'AI investment chatbot', org: 'JPMorgan Chase · 2024',
     kind: 'stat', bg: '#F3F0EA', fg: '#141414', kicker: 'AI Fellowship · team lead', big: '93%', sub: 'prediction accuracy on 14K+ deals',
     summary: 'Led a team of 4 building a chatbot that helps investors find high-potential startups, backed by a neural network trained on historical investment data.',
     points: [
@@ -61,23 +72,23 @@ const CARDS = [
     url: 'https://www.jpmorganchase.com/', linkLabel: 'JPMorgan Chase'
   },
   {
-    id: 'adhd', cat: 'Research', areas: ['AI/ML'], title: 'ADHD prediction from neuroimaging', org: 'Top 0.03% Kaggle', kind: 'cover',
+    id: 'adhd', cat: 'Research', areas: ['AI/ML'], title: 'ADHD prediction from neuroimaging', org: 'Top 0.03% Kaggle', kind: 'cover', kicker: 'Top 0.03% on Kaggle',
     summary: 'A neural network predicting ADHD and sex classification from neuroimaging data for the WiDS Datathon 2025.',
     points: ['Ranked top 0.03% on Kaggle', '#1 across Break Through Tech’s Cornell, MIT and UCLA cohorts'],
     stack: ['TensorFlow', 'Python', 'NumPy', 'Pandas'],
     url: 'https://github.com/wids-teamConscious/WIDS-Datathon-2025', linkLabel: 'View on GitHub'
   },
   {
-    id: 'nutri', cat: 'Projects', areas: ['Full-stack', 'AI/ML'], title: 'NutriBot', org: 'AI meal planner', kind: 'cover',
+    id: 'nutri', cat: 'Projects', areas: ['Full-stack', 'Agent'], title: 'NutriBot', org: 'AI meal planner', kind: 'cover',
     summary: 'An AI meal-planning assistant that recommends recipes based on your input.',
     points: [],
     stack: ['React', 'FastAPI', 'Python', 'Qdrant', 'Redis', 'OpenAI API'],
     url: 'https://github.com/Xinyue519/meal_planner', linkLabel: 'View on GitHub'
   },
   {
-    id: 'hopper', cat: 'Projects', areas: ['Game dev'], title: 'Captain Hopper', org: 'Unity · Hackathon', kind: 'cover',
+    id: 'hopper', cat: 'Projects', areas: ['Game dev'], title: 'Captain Hopper', org: 'Unity · Hackathon', kind: 'cover', kicker: 'Hackathon winner',
     summary: 'A desktop study-buddy pomodoro with an engaging reward system.',
-    points: [],
+    points: ['Winner of the “Most Hopper” mini track at HopperHacks X', 'Built in Unity (C#) with a team of three, all new to Unity'],
     stack: ['C#', 'Unity'],
     url: 'https://devpost.com/software/captain-hopper', linkLabel: 'View on Devpost'
   },
@@ -111,13 +122,15 @@ const EXPS = [
     bullets: ['Trends and applications of Al in education', 'Guest speaker at Rider University and Beijing Normal University'] }
 ];
 
-const FILTERS = [['all', 'All projects'], ['Full-stack', 'Full-stack'], ['Frontend', 'Frontend'], ['Backend', 'Backend'], ['AI/ML', 'AI / ML']];
+const FILTERS = [['all', 'All projects'], ['Full-stack', 'Full-stack'], ['Frontend', 'Frontend'], ['Backend', 'Backend'], ['Agent', 'Agent'], ['AI/ML', 'AI / ML']];
 
 /* Full-stack work counts toward both Frontend and Backend. */
 const FILTER_MATCH = { 'Frontend': ['Frontend', 'Full-stack'], 'Backend': ['Backend', 'Full-stack'] };
 
 const areasHTML =(areas, cls) => `<span class="${cls}">${areas.map((a) => `<span>${esc(a)}</span>`).join('')}</span>`;
 const EMAIL = 'xysu05@gmail.com';
+const RESUME_URL = 'https://docs.google.com/document/d/1PmCVxzoghWh1V563ctxFxDb6pZa7Kwh59XTPrKoH6PU/edit?usp=sharing';
+document.querySelectorAll('[data-resume]').forEach((a) => { a.href = RESUME_URL; });
 
 /* =========================================================
    Helpers
@@ -166,7 +179,6 @@ function coverHTML(id) {
           <div class="tasks">
             <div class="task"><small>TASK 1</small><b>ADHD</b></div>
             <div class="task"><small>TASK 2</small><b>Sex</b></div>
-            <span class="rank">top 0.03%</span>
           </div>
         </div>
       </div>`;
@@ -198,6 +210,18 @@ function coverHTML(id) {
         </div>
       </div>`;
     }
+    case 'seated':
+      return `<div class="cv cv-seated" role="img" aria-label="Seated cover: a chat booking a table, with the agent's step-by-step trace">
+        <div class="chat">
+          <div class="me">Table for 4, Italian, West Village, Friday 7pm</div>
+          <div class="cv-card trace">
+            <div class="step"><i class="ok"></i><b class="mono">search_restaurants</b><small>6 found</small></div>
+            <div class="step"><i class="ok"></i><b class="mono">check_availability</b><small>7:00 · 7:30</small></div>
+            <div class="step"><i class="ok"></i><b class="mono">book_table</b><small>confirmed</small></div>
+            <div class="done">Booked: Trattoria Luce, Fri 7:00 PM, party of 4</div>
+          </div>
+        </div>
+      </div>`;
     default: return '';
   }
 }
@@ -212,7 +236,7 @@ function mediaHTML(c) {
   const inner = c.kind === 'img'
     ? `<img src="${esc(c.img)}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">`
     : coverHTML(c.id);
-  return inner + areasHTML(c.areas, 'areas media-areas');
+  return inner + (c.kicker ? `<span class="media-kicker">${esc(c.kicker)}</span>` : '') + areasHTML(c.areas, 'areas media-areas');
 }
 
 /* =========================================================
@@ -249,12 +273,31 @@ function renderFilters() {
     `<button type="button" class="chip" data-filter="${id}" aria-pressed="${filter === id}">${label}</button>`).join('');
 }
 
+/* Small greyscale company logo for cards that match a role in EXPS (Mercury, Datadog, JPMorgan). */
+const PERSONAL_ICON = '<svg class="org-logo org-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>';
+const RESEARCH_ICON = '<svg class="org-logo org-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.5a2 2 0 0 1-.2.9L4.7 20.5a1 1 0 0 0 .9 1.5h12.8a1 1 0 0 0 .9-1.5l-5.1-10.1a2 2 0 0 1-.2-.9V2M8.5 2h7M7 16h10"/></svg>';
+const RESEARCH_SRC = { kdd: 'KDD MILETS', adhd: 'Kaggle', };
+const YEARS = { seated: 2026, split: 2026, nutri: 2025, hopper: 2025, kdd: 2026, adhd: 2025, airbnb: 2024 };
+const orgLabel = (c) => {
+  const yr = YEARS[c.id] ? ` · ${YEARS[c.id]}` : '';
+  if (c.cat === 'Projects') return `Personal project${yr}`;
+  if (c.cat === 'Research') return `${RESEARCH_SRC[c.id] ? RESEARCH_SRC[c.id] + ', ' : ''}Research${yr}`;
+  return c.org;
+};
+
+function orgLogo(c) {
+  const e = EXPS.find((x) => x.id === c.id);
+  if (!e) return c.cat === 'Projects' ? PERSONAL_ICON : c.cat === 'Research' ? RESEARCH_ICON : '';
+  const src = e.logo || `https://www.google.com/s2/favicons?domain=${encodeURIComponent(e.domain)}&sz=64`;
+  return `<img class="org-logo" src="${src}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`;
+}
+
 function cardHTML(c) {
   return `<button type="button" class="card reveal" data-open="${c.id}" aria-label="Open ${esc(c.title)}">
     <div class="media">${mediaHTML(c)}</div>
     <div class="card-meta">
       <span class="card-title">${esc(c.title)} <span class="go" aria-hidden="true">→</span></span>
-      <span class="card-org">${esc(c.org)}</span>
+      <span class="card-org">${orgLogo(c)}${esc(orgLabel(c))}</span>
     </div>
   </button>`;
 }
